@@ -6,6 +6,45 @@
     <title>ReturnEase Logistics</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Link to your CSS file -->
+
+    <style>
+        /* CSS animations */
+        @keyframes moveInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-out;
+        }
+
+        .move-in-left {
+            animation-name: moveInLeft;
+        }
+
+        .move-in-right {
+            animation-name: moveInRight;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -26,7 +65,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="hero">
+    <h<header class="hero">
         <div class="container">
             <h2>Welcome to ReturnEase Logistics</h2>
             <p>Your hassle-free solution for Amazon returns</p>
@@ -35,14 +74,19 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container">
-        <section>
+    <d<div class="container">
+        <section id="services" class="animated move-in-left">
             <h3>Our Services</h3>
-            <p>Effortlessly manage your Amazon returns with our convenient pick-up and drop-off service. Our dedicated team of couriers ensures that your return items are safely collected from your doorstep at a time convenient for you. We handle all the logistics, so you don't have to worry about a thing.</p>
-            <p>With our pick-up service, simply schedule a collection time through our user-friendly platform, and we'll take care of the rest. Alternatively, if you prefer to drop off your returns, you can visit one of our secure locations, conveniently located across the DC, Maryland, and Virginia area.</p>
+            <div class="service">
+                <!-- Add your service content here -->
+                <!-- Example: -->
+                <h4>Pick-Up & Drop-Off</h4>
+                <p>Effortlessly manage your Amazon returns with our convenient pick-up and drop-off service. Our dedicated team of couriers ensures that your return items are safely collected from your doorstep at a time convenient for you. We handle all the logistics, so you don't have to worry about a thing.</p>
+                <p>With our pick-up service, simply schedule a collection time through our user-friendly platform, and we'll take care of the rest. Alternatively, if you prefer to drop off your returns, you can visit one of our secure locations, conveniently located across the DC, Maryland, and Virginia area.</p>
+            </div>
         </section>
 
-        <section>
+        <section id="subscriptions" class="animated move-in-right">
             <h3>Subscription Plans</h3>
             <p>Choose from our flexible subscription plans:</p>
             <ul>
@@ -53,7 +97,7 @@
             <!-- Add appropriate classes and data attributes for subscription buttons -->
         </section>
 
-        <section>
+        <section id="contact" class="animated move-in-left">
             <h3>Contact Us</h3>
             <p>Have questions or need assistance? Contact our support team for help.</p>
         </section>
